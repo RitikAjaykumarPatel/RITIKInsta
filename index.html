@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+       footer{
+        background-color: rgb(233, 230, 230);
+        position: absolute;
+        width: 100%;
+        bottom: 0px;
+        left:0% 
+       }
+       #insta{
+        margin-left: 50px;
+        height: 50px;
+        position: relative;
+        bottom: 15px;
+        }
+        #my{
+            height: 500px;
+            width: auto;
+        }
+        article{
+            margin: 5px auto;
+            position: absolute;
+            left: 50%;
+            transition: all 0.4s ease;
+        }
+        article img:first-child{
+            width: 100%;
+            box-shadow: 20px 20px 25px 1px  rgb(219, 183, 183);
+            border-radius: 10px;
+            object-fit: cover;
+            transition: all 0.4s ease;
+        }
+        article img:last-child{
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            opacity: 0;
+        }
+        article:hover::before{opacity: 1;}
+        article:hover img:last-child{
+            opacity: 1;
+            transform: translateY(10%);
+        }
+        #c{
+            font-family: cursive;
+            margin-left: 5%;
+        }
+        #e{
+            font-family: cursive;
+            margin-top: 50%;
+            position: relative;
+            left: 35%;
+        }
+    </style>    
+</head>
+<body>
+    <article>
+        <p id="e">Hover and click here</p>
+         <a href="https://www.instagram.com/p3r2a1_e103/?hl=en"><img id="my" src="myimage.jpg" alt=""></a>
+    </article>
+    <footer>
+        <div>
+            <p id="c">Or click here </p>
+            <a href="https://www.instagram.com/p3r2a1_e103/?hl=en"><img id="insta" src="Instagram.png" alt=""></a>
+        </div>
+    </footer>
+</body>
+</html>
