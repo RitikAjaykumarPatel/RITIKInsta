@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
    <style>
+       body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+article {
+    margin: 5px auto;
+    transition: all 0.4s ease;
+    position: relative;  /* Remove absolute */
+}
        footer{
         background-color: rgb(233, 230, 230);
         position: absolute;
@@ -22,11 +32,7 @@
             height: 500px;
             width: auto;
         }
-        article{
-            margin: 5px auto;
-            position: absolute;
-            transition: all 0.4s ease;
-        }
+        
         article img:first-child{
             width: 100%;
             box-shadow: 20px 20px 25px 1px  rgb(219, 183, 183);
@@ -37,16 +43,15 @@
         article img:last-child{
             position: absolute;
             width: 100%;
-            top: 0;
-            left: 0;
-            right: 0;
-            margin: auto;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             opacity: 0;
         }
         article:hover::before{opacity: 1;}
         article:hover img:last-child{
             opacity: 1;
-            transform: translateY(10%);
+            transform: translate(-50%, calc(-50% + 10px));
         }
         #c{
             font-family: cursive;
@@ -56,7 +61,8 @@
             font-family: cursive;
             margin-top: 50%;
             position: relative;
-            left: 35%;
+            text-align: center;
+            left: 0;
         }
     </style>    
 </head>
